@@ -177,6 +177,102 @@
 
     
     
+      
+      
+        
+        
+        
+      
+
+      
+    
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/05/个人vim配置/" itemprop="url">
+                  个人vim配置
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-05T23:19:14+08:00" content="2016-01-05">
+              2016-01-05
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="u5B89_u88C5"><a href="#u5B89_u88C5" class="headerlink" title="安装"></a>安装</h2><p>在ubuntu中直接命令行输入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install vim-gnome</span><br></pre></td></tr></table></figure></p>
+<p>同时安装vim的插件管理器<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install vim-addons-manager</span><br><span class="line">sudo apt-get install vim-pathogen</span><br><span class="line">sudo apt-get install vim-youcompleteme</span><br></pre></td></tr></table></figure></p>
+<p>可以使用下面的命令查看vim插件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim-addons</span><br></pre></td></tr></table></figure></p>
+<p>使用一下命令安装列出的可安装插件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim-addons install &lt;addon&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="u5173_u4E8Epathogen"><a href="#u5173_u4E8Epathogen" class="headerlink" title="关于pathogen"></a>关于pathogen</h3><p>pathogen 能为vim插件保存在独立文件中便于管理，并且能在vim启动时自动加载。<br>安装pathogen后的.vim目录：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|--autoload  #vim&#30340;&#33258;&#21160;&#21152;&#36733;&#30446;&#24405;&#10;|--bundle    #pathogen&#33258;&#21160;&#21152;&#36733;&#25554;&#20214;&#30446;&#24405;&#10;|--doc&#10;|--plugin    #vim&#30340;&#25554;&#20214;&#30446;&#24405;</span><br></pre></td></tr></table></figure></p>
+<h2 id="vim_u914D_u7F6E"><a href="#vim_u914D_u7F6E" class="headerlink" title="vim配置"></a>vim配置</h2><p>vim python的配置<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#34;normal setting&#10;set nocompatible&#10;&#10;if has(&#34;gui_running&#34;)&#10;    set lines=42&#10;    set columns=118&#10;endif&#10;&#10;set guiheadroom=0&#10;&#10;&#34;format&#10;set nu&#10;set noexpandtab&#10;set copyindent&#10;set preserveindent&#10;set autowrite&#10;set display=lastline&#10;&#10;&#34;encoding&#10;set encoding=utf-8&#10;set fileencoding=utf-8&#10;set fileencodings=utf-8,ucs-bom,latin1&#10;set termencoding=utf-8&#10;&#10;&#34;index&#10;set wrap&#10;set autoindent&#10;set smartindent&#10;set smarttab&#10;set cindent&#10;set linebreak&#10;set shiftround&#10;&#10;&#34;code folding&#10;set foldmethod=indent&#10;set foldlevel=99&#10;&#10;&#34;search and case&#10;set gdefault&#10;set hlsearch&#10;set incsearch&#10;set ignorecase&#10;set fileignorecase&#10;set showcmd&#10;set whichwrap+=&#60;,&#62;,h,l&#10;&#10;&#34;no backup&#10;set nobackup&#10;set nowritebackup&#10;set noswapfile&#10;&#10;&#34;rule&#10;set noshowmode&#10;set ruler&#10;set winaltkeys=no&#10;&#10;&#34;advance&#10;set magic&#10;set lazyredraw&#10;set ttyfast&#10;set hidden&#10;set autoread&#10;set laststatus=2&#10;set cmdheight=1&#10;set modelines=1&#10;&#10;&#34;no sound&#10;set noerrorbells&#10;set novisualbell&#10;set t_vb=&#10;&#10;&#34;fold setting&#10;set foldenable&#10;set fileformat=unix&#10;set fileformats=unix,dos,mac&#10;&#10;if has(&#34;gui_running&#34;)&#10;&#9;set guioptions-=e&#10;&#9;set guioptions-=m&#10;&#9;set guioptions-=T&#10;&#9;set guioptions-=L&#10;&#9;set guioptions-=r&#10;&#9;set guioptions-=B&#10;&#9;set guioptions-=0&#10;&#9;set go=&#10;&#9;set guitablabel=&#10;&#9;set paste&#10;&#9;set mousemodel=popup_setpos&#10;&#9;set mouse-=a&#10;&#9;&#34;set guitablabel=%M\ %t&#10;&#10;&#9;&#34; Fonts Settings&#10;&#9;&#34;set guifont=ProfontWindows\ 9&#10;&#9;&#34;set guifont=IBM\ 3270\ Narrow\ Medium\ 10&#10;    &#34;set guifont=Aix\ 9&#10;&#10;&#9;map &#60;silent&#62; &#60;F1&#62; :if &#38;guioptions =~# &#39;T&#39; &#60;Bar&#62;&#10;&#9;&#9;&#9;&#9;\set guioptions-=T &#60;Bar&#62;&#10;&#9;&#9;&#9;&#9;\set guioptions-=m &#60;bar&#62;&#10;&#9;&#9;&#9;&#9;\else &#60;Bar&#62;&#10;&#9;&#9;&#9;&#9;\set guioptions+=T &#60;Bar&#62;&#10;&#9;&#9;&#9;&#9;\set guioptions+=m &#60;Bar&#62;&#10;&#9;&#9;&#9;&#9;\endif&#60;CR&#62;&#10;endif&#10;&#10;&#34;setting tabs&#10;set list listchars=tab:-\ ,extends:&#62;,precedes:&#60;&#10;&#10;&#34;plugin&#10;execute pathogen#infect()&#10;syntax on&#10;filetype plugin indent on&#10;&#10;&#34;taglist setting&#10;let Tlist_Auto_Highlight_Tag=1&#10;let Tlist_Auto_Open=0&#10;let Tlist_Auto_Update=1&#10;let Tlist_Display_Tag_Scope=1&#10;let Tlist_Exit_OnlyWindow=1&#10;let Tlist_Enable_Dold_Column=1&#10;let Tlist_File_Fold_Auto_Close=1&#10;let Tlist_Show_One_File=1&#10;let Tlist_Use_Right_Window=1&#10;let Tlist_Use_SingleClick=1&#10;&#34;nero tree ignore file&#10;let NERDTreeIgnore=[&#34;.pyc$&#34;, &#34;~$&#34;]&#10;&#34;simply fold setting&#10;let g:SimpylFold_docstring_preview=1&#10;&#34;autocompleteme&#10;let g:ycm_autoclose_preview_window_after_completion=1&#10;map &#60;leader&#62; g :YcmCompleter GotoDefinitionElseDeclaration&#60;CR&#62;&#10;&#34;python highlight&#10;let python_highlight_all=1&#10;&#34;color scheme&#10;if has(&#34;gui_running&#34;)&#10;&#9;set background=dark&#10;&#9;colorscheme solarized&#10;&#9;call togglebg#map(&#34;&#60;F5&#62;&#34;)&#10;endif&#10;&#34;airline&#10;if !exists(&#39;g:airline_symbols&#39;)&#10;  let g:airline_symbols = &#123;&#125;&#10;endif&#10;let g:airline_left_sep = &#39;&#39;&#10;let g:airline_right_sep = &#39;&#39;&#10;let g:airline#extensions#tabline#enabled = 1&#10;let g:airline#extensions#tabline#left_sep = &#39;&#39;&#10;let g:airline#extensions#tabline#left_alt_sep = &#39;|&#39;&#10;&#10;&#34;python virtualenv support&#10;py &#60;&#60; EOF&#10;import os&#10;import sys&#10;if &#34;VIRTUAL_ENV&#34; in os.environ:&#10;&#9;project_base_dir = os.environ[&#34;VIRTUAL_ENV&#34;]&#10;&#9;activate_this = os.path.join(project_base_dir, &#34;bin/activate_this.py&#34;)&#10;&#9;execfile(activate_this, dict(__file__=activate_this))&#10;EOF&#10;&#10;&#34;key map&#10;nnoremap &#60;F2&#62; :NERDTreeToggle&#60;CR&#62;&#10;nnoremap &#60;silent&#62; &#60;F8&#62; :TlistToggle&#60;CR&#62;&#10;&#34;windows split&#10;nnoremap &#60;C-J&#62; &#60;C-W&#62;&#60;C-J&#62;&#10;nnoremap &#60;C-K&#62; &#60;C-W&#62;&#60;C-K&#62;&#10;nnoremap &#60;C-L&#62; &#60;C-W&#62;&#60;C-L&#62;&#10;nnoremap &#60;C-H&#62; &#60;C-W&#62;&#60;C-H&#62;&#10;&#34;code folding&#10;nnoremap &#60;space&#62; za</span><br></pre></td></tr></table></figure></p>
+<h3 id="vim_u63D2_u4EF6"><a href="#vim_u63D2_u4EF6" class="headerlink" title="vim插件"></a>vim插件</h3><p>taglist  youcompleteme  pathogen<br>ctrlp     SimpylFold  vim-airline           vim-flake8<br>nerdtree  syntastic   vim-colors-solarized  vim-fugitive</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -281,8 +377,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/01/01/HexoDocumentation/" itemprop="url">
-                  Hexo Documentation
+                <a class="post-title-link" href="/2016/01/04/HexoDocumentation/" itemprop="url">
+                  Hexo 文档
                 </a>
               
             
@@ -292,8 +388,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-01T19:44:14+08:00" content="2016-01-01">
-              2016-01-01
+            <time itemprop="dateCreated" datetime="2016-01-04T22:00:00+08:00" content="2016-01-04">
+              2016-01-04
             </time>
           </span>
 
@@ -319,15 +415,16 @@
         
           <span itemprop="articleBody">
             
-              <h3 id="What_is_Hexo"><a href="#What_is_Hexo" class="headerlink" title="What is Hexo"></a>What is Hexo</h3><p>Hexo is a blog framework base on markdown markup, it’s very simple and useful. </p>
-<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p><code>npm install -g hexo-cli</code></p>
-<h3 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h3><p>Once Hexo is installed, run the following commands to initialize Hexo in the target folder.</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo init &lt;folder&gt;</span><br><span class="line"><span class="variable">$ </span>cd &lt;folder&gt;</span><br><span class="line"><span class="variable">$ </span>npm install</span><br></pre></td></tr></table></figure>
-<p>Once initialised, here’s what your project folder will look like:</p>
+              <p>Hexo 是个轻量级博客框架，基于javascript编写，支持markdown，支持数据迁移，使用简单。</p>
+<h2 id="u5B89_u88C5"><a href="#u5B89_u88C5" class="headerlink" title="安装"></a>安装</h2><p><code>npm install -g hexo-cli</code></p>
+<h2 id="u5F00_u59CB"><a href="#u5F00_u59CB" class="headerlink" title="开始"></a>开始</h2><p>Hexo 安装好后，使用下面的命令初始化bolg环境，建立blog目录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>初始化成功后可以看到下面的目录结构：</p>
 <figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line"><span class="string">|   ├── _drafts</span></span><br><span class="line"><span class="string">|   └── _posts</span></span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-<h4 id="scaffold"><a href="#scaffold" class="headerlink" title="scaffold"></a>scaffold</h4><p>Scaffold folder. When you create a new post, Hexo bases the new file on the scaffold.</p>
-<h4 id="source"><a href="#source" class="headerlink" title="source"></a>source</h4><p>Source folder. This is where you put your site’s content. Hexo ignores hidden files and files or folders whose names are prefixed with <code>_</code>(underscore) - except the <code>_posts</code> folder. Renderable files (e.g. Markdown, HTML) will be processed and put into the <code>public</code> folder, while other files will simply be copied.</p>
-<h3 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h3><p>You can modify site settings in <code>_config.yml</code>.</p>
+<h2 id="u6587_u4EF6_u7ED3_u6784_u8BF4_u660E"><a href="#u6587_u4EF6_u7ED3_u6784_u8BF4_u660E" class="headerlink" title="文件结构说明"></a>文件结构说明</h2><h4 id="scaffold"><a href="#scaffold" class="headerlink" title="scaffold"></a>scaffold</h4><p>Scaffold 是模板目录，从<code>hexo new [layout] &lt;title&gt;</code>中创建的新post，会从该目录中搜索相应的<code>layout</code>，并基于模板创建。</p>
+<h4 id="source"><a href="#source" class="headerlink" title="source"></a>source</h4><p>Source 目录是放置blog站点内容的地方，默认情况下包含<code>_posts</code>和<code>_drafts</code>两个文件。Hexo会忽略其他带有<code>_</code>前缀的文件。这里的markdown文件和html文件将会被<code>hexo generate</code>渲染处理，渲染后的文件将放置在<code>public</code>目录下。</p>
+<h4 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h4><p>themes文件夹下放置的是站点的主题文件，可以在github中搜索<code>hexo-theme</code>了解相关。</p>
+<h2 id="u914D_u7F6E_u8BBE_u7F6E"><a href="#u914D_u7F6E_u8BBE_u7F6E" class="headerlink" title="配置设置"></a>配置设置</h2><p><code>_config.yml</code>文件是站点的全局设定文件。下面列出设置项目的相关字段：</p>
 <h4 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h4><table>
 <thead>
 <tr>
@@ -372,28 +469,29 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">url</td>
+<td style="text-align:left"><code>url</code></td>
 <td style="text-align:left">The URL of your website</td>
-<td style="text-align:left"></td>
+<td style="text-align:left">–</td>
 </tr>
 <tr>
-<td style="text-align:left">root</td>
+<td style="text-align:left"><code>root</code></td>
 <td style="text-align:left">The root directory of your website</td>
-<td style="text-align:left"></td>
+<td style="text-align:left">–</td>
 </tr>
 <tr>
-<td style="text-align:left">permalink</td>
+<td style="text-align:left"><code>permalink</code></td>
 <td style="text-align:left">The permalink format of articles</td>
 <td style="text-align:left">:year/:month/:day/:title/</td>
 </tr>
 <tr>
-<td style="text-align:left">permalink_default</td>
+<td style="text-align:left"><code>permalink_default</code></td>
 <td style="text-align:left">Default values of each segment in permalink</td>
+<td style="text-align:left">–</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>Website in subdirectory<br>If your website is in a subdirectory (such as <code>http://example.org/blog</code>) set <code>url</code>to <code>http://example.org/blog</code> and set <code>root</code> to <code>/blog/</code>.</p>
+<p>Website in subdirectory<br>If your website is in a subdirectory (such as <code>http://example.org/blog</code>) set <code>url</code> to <code>http://example.org/blog</code> and set <code>root</code> to <code>/blog/</code>.</p>
 </blockquote>
 <h4 id="Directory"><a href="#Directory" class="headerlink" title="Directory"></a>Directory</h4><table>
 <thead>
@@ -405,43 +503,44 @@
 </thead>
 <tbody>
 <tr>
-<td>source_dir</td>
+<td><code>source_dir</code></td>
 <td>Source folder. Where your content is stored</td>
 <td>source</td>
 </tr>
 <tr>
-<td>public_dir</td>
+<td><code>public_dir</code></td>
 <td>Public folder. Where the static site will be generated</td>
 <td>public</td>
 </tr>
 <tr>
-<td>tag_dir</td>
+<td><code>tag_dir</code></td>
 <td>Tag directory</td>
 <td>tags</td>
 </tr>
 <tr>
-<td>archive_dir</td>
+<td><code>archive_dir</code></td>
 <td>Archive directory</td>
 <td>archives</td>
 </tr>
 <tr>
-<td>category_dir</td>
+<td><code>category_dir</code></td>
 <td>Category directory</td>
 <td>categories</td>
 </tr>
 <tr>
-<td>code_dir</td>
+<td><code>code_dir</code></td>
 <td>Include code directory</td>
 <td>downloads/code</td>
 </tr>
 <tr>
-<td>i18n_dir</td>
+<td><code>i18n_dir</code></td>
 <td>i18n directory</td>
 <td>:lang</td>
 </tr>
 <tr>
-<td>skip_render</td>
+<td><code>skip_render</code></td>
 <td>Paths not to be rendered. You can use glob expressions for path matching</td>
+<td>–</td>
 </tr>
 </tbody>
 </table>
@@ -455,53 +554,54 @@
 </thead>
 <tbody>
 <tr>
-<td>new_post_name</td>
+<td><code>new_post_name</code></td>
 <td>The filename format for new posts</td>
 <td>:title.md</td>
 </tr>
 <tr>
-<td>default_layout</td>
+<td><code>default_layout</code></td>
 <td>Default layout</td>
 <td>post</td>
 </tr>
 <tr>
-<td>titlecase</td>
+<td><code>titlecase</code></td>
 <td>Transform titles into title case?</td>
 <td>false</td>
 </tr>
 <tr>
-<td>external_link</td>
+<td><code>external_link</code></td>
 <td>Open external links in new tab?</td>
 <td>true</td>
 </tr>
 <tr>
-<td>filename_case</td>
+<td><code>filename_case</code></td>
 <td>Transform filenames to <code>1</code> lower case; <code>2</code> upper case</td>
 <td>0</td>
 </tr>
 <tr>
-<td>render_drafts</td>
+<td><code>render_drafts</code></td>
 <td>Display drafts?</td>
 <td>false</td>
 </tr>
 <tr>
-<td>post_asset_folder</td>
+<td><code>post_asset_folder</code></td>
 <td>Enable the Asset Folder?</td>
 <td>false</td>
 </tr>
 <tr>
-<td>relative_link</td>
+<td><code>relative_link</code></td>
 <td>Make links relative to the root folder?</td>
 <td>false</td>
 </tr>
 <tr>
-<td>future</td>
+<td><code>future</code></td>
 <td>Display future posts?</td>
 <td>true</td>
 </tr>
 <tr>
-<td>highlight</td>
+<td><code>highlight</code></td>
 <td>Code block settings</td>
+<td>–</td>
 </tr>
 </tbody>
 </table>
@@ -515,18 +615,19 @@
 </thead>
 <tbody>
 <tr>
-<td>default_category</td>
+<td><code>default_category</code></td>
 <td>Default category</td>
 <td>uncategorized</td>
 </tr>
 <tr>
-<td>category_map</td>
+<td><code>category_map</code></td>
 <td>Category slugs</td>
-<td></td>
+<td>–</td>
 </tr>
 <tr>
-<td>tag_map</td>
+<td><code>tag_map</code></td>
 <td>Tag slugs</td>
+<td>–</td>
 </tr>
 </tbody>
 </table>
@@ -541,12 +642,12 @@
 </thead>
 <tbody>
 <tr>
-<td>date_format</td>
+<td><code>date_format</code></td>
 <td>Date format</td>
 <td>MMM D YYYY</td>
 </tr>
 <tr>
-<td>time_format</td>
+<td><code>time_format</code></td>
 <td>Time format</td>
 <td>H:mm:ss</td>
 </tr>
@@ -562,12 +663,12 @@
 </thead>
 <tbody>
 <tr>
-<td>per_page</td>
+<td><code>per_page</code></td>
 <td>The amount of the posts displayed on a single page. <code>0</code> disables pagination</td>
 <td>10</td>
 </tr>
 <tr>
-<td>pagination_dir</td>
+<td><code>pagination_dir</code></td>
 <td>Pagination directory</td>
 <td>page</td>
 </tr>
@@ -582,21 +683,21 @@
 </thead>
 <tbody>
 <tr>
-<td>theme</td>
+<td><code>theme</code></td>
 <td>Theme name. <code>false</code> disables theming</td>
 </tr>
 <tr>
-<td>deploy</td>
+<td><code>deploy</code></td>
 <td>Deployment setting</td>
 </tr>
 </tbody>
 </table>
-<h3 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h3><h4 id="init"><a href="#init" class="headerlink" title="init"></a>init</h4><p><code>$ hexo init [folder]</code></p>
-<p>Initializes a website. If no folder is provided, Hexo will set up the website in the current directory.</p>
-<h4 id="new"><a href="#new" class="headerlink" title="new"></a>new</h4><p><code>$ hexo new [layout] &lt;title&gt;</code></p>
-<p>Creates a new article. If no layout is provided, Hexo will use the default_layout from _config.yml. If the title contains spaces, surround it with quotation marks.</p>
-<h4 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h4><p><code>$ hexo generate</code></p>
-<p>Generates static files.</p>
+<h2 id="hexo_u547D_u4EE4"><a href="#hexo_u547D_u4EE4" class="headerlink" title="hexo命令"></a>hexo命令</h2><h4 id="u521D_u59CB_u5316"><a href="#u521D_u59CB_u5316" class="headerlink" title="初始化"></a>初始化</h4><p><code>$ hexo init [folder]</code></p>
+<p>初始化并创建站点目录.</p>
+<h4 id="u521B_u5EFA"><a href="#u521B_u5EFA" class="headerlink" title="创建"></a>创建</h4><p><code>$ hexo new [layout] &lt;title&gt;</code></p>
+<p>创建新的post，layout是目录scaffolds目录下的文件，有 <code>page</code>，<code>draft</code>，<code>post</code>。默认是 <code>post</code>。</p>
+<h4 id="u751F_u6210"><a href="#u751F_u6210" class="headerlink" title="生成"></a>生成</h4><p><code>$ hexo generate</code></p>
+<p>生成静态文件，用于部署发表到服务器。</p>
 <table>
 <thead>
 <tr>
@@ -615,10 +716,10 @@
 </tr>
 </tbody>
 </table>
-<h4 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h4><p><code>$ hexo publish [layout] &lt;filename&gt;</code></p>
-<p>Publishes a draft.</p>
-<h4 id="server"><a href="#server" class="headerlink" title="server"></a>server</h4><p><code>$ hexo server</code></p>
-<p>Starts a local server. By default, this is at <code>http://localhost:4000/</code>.</p>
+<h4 id="u53D1_u8868"><a href="#u53D1_u8868" class="headerlink" title="发表"></a>发表</h4><p><code>$ hexo publish [layout] &lt;filename&gt;</code></p>
+<p>发表draft目录下的文件，实际上是将改目录下的文件移动到post目录</p>
+<h4 id="u672C_u5730_u670D_u52A1_u5668"><a href="#u672C_u5730_u670D_u52A1_u5668" class="headerlink" title="本地服务器"></a>本地服务器</h4><p><code>$ hexo server</code></p>
+<p>默认为 <code>http://localhost:4000/</code>.</p>
 <table>
 <thead>
 <tr>
@@ -641,8 +742,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h4><p><code>$ hexo deploy</code></p>
-<p>Deploys your website.</p>
+<h4 id="u90E8_u7F72"><a href="#u90E8_u7F72" class="headerlink" title="部署"></a>部署</h4><p><code>$ hexo deploy</code></p>
 <table>
 <thead>
 <tr>
@@ -657,8 +757,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="render"><a href="#render" class="headerlink" title="render"></a>render</h4><p><code>$ hexo render &lt;file1&gt; [file2] ...</code></p>
-<p>Renders files.</p>
+<h4 id="u6E32_u67D3"><a href="#u6E32_u67D3" class="headerlink" title="渲染"></a>渲染</h4><p><code>$ hexo render &lt;file1&gt; [file2] ...</code></p>
 <table>
 <thead>
 <tr>
@@ -673,25 +772,22 @@
 </tr>
 </tbody>
 </table>
-<h4 id="migrate"><a href="#migrate" class="headerlink" title="migrate"></a>migrate</h4><p><code>$ hexo migrate &lt;type&gt;</code></p>
-<p>Migrates content from other blog systems.</p>
-<h4 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h4><p><code>$ hexo clean</code></p>
-<p>Cleans the cache file (<code>db.json</code>) and generated files (<code>public</code>).</p>
+<h4 id="u6570_u636E_u8FC1_u79FB"><a href="#u6570_u636E_u8FC1_u79FB" class="headerlink" title="数据迁移"></a>数据迁移</h4><p><code>$ hexo migrate &lt;type&gt;</code></p>
+<p>从其他bolg系统中迁移数据到hexo，如ghost等。需要安装相应的工具。</p>
+<h4 id="u6E05_u7406"><a href="#u6E05_u7406" class="headerlink" title="清理"></a>清理</h4><p><code>$ hexo clean</code></p>
+<p>清理缓存 (<code>db.json</code>) 和静态文件 (<code>public</code>).</p>
 <h4 id="list"><a href="#list" class="headerlink" title="list"></a>list</h4><p><code>$ hexo list &lt;type&gt;</code></p>
-<p>Lists all routes.</p>
-<h4 id="version"><a href="#version" class="headerlink" title="version"></a>version</h4><p><code>$ hexo version</code></p>
-<p>Displays version information.</p>
-<h4 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h4><h5 id="Safe_mode"><a href="#Safe_mode" class="headerlink" title="Safe mode"></a>Safe mode</h5><p><code>$ hexo --safe</code></p>
-<p>Disables loading plugins and scripts. Try this if you encounter problems after installing a new plugin.</p>
-<h5 id="Debug_mode"><a href="#Debug_mode" class="headerlink" title="Debug mode"></a>Debug mode</h5><p><code>$ hexo --debug</code></p>
-<p>Logs verbose messages to the terminal and to debug.log. Try this if you encounter any problems with Hexo. If you see errors, please raise a GitHub issue.</p>
-<h5 id="Silent_mode"><a href="#Silent_mode" class="headerlink" title="Silent mode"></a>Silent mode</h5><p><code>$ hexo --silent</code></p>
-<p>Silences output to the terminal.</p>
-<h5 id="Customize_config_file_path"><a href="#Customize_config_file_path" class="headerlink" title="Customize config file path"></a>Customize config file path</h5><p><code>$ hexo --config custom.yml</code></p>
-<p>Uses a custom config file (instead of <code>_config.yml</code>).</p>
-<h5 id="Display_drafts"><a href="#Display_drafts" class="headerlink" title="Display drafts"></a>Display drafts</h5><p><code>$ hexo --draft</code></p>
-<p>Displays draft posts (stored in the <code>source/_drafts</code> folder).</p>
-<h5 id="Customize_CWD"><a href="#Customize_CWD" class="headerlink" title="Customize CWD"></a>Customize CWD</h5><p><code>$ hexo --cwd /path/to/cwd</code></p>
+<p>列出指定<type>的文件，如<code>hexo list post</code>将会列出所以<code>_posts</code>目录下的文件。</type></p>
+<h4 id="u9009_u9879"><a href="#u9009_u9879" class="headerlink" title="选项"></a>选项</h4><h5 id="u5B89_u5168_u6A21_u5F0F"><a href="#u5B89_u5168_u6A21_u5F0F" class="headerlink" title="安全模式"></a>安全模式</h5><p><code>$ hexo --safe</code></p>
+<p>禁用所有安装的插件和脚本。可以尝试使用该命令定位安装新插件后出现的bug。</p>
+<h5 id="Debug__u6A21_u5F0F"><a href="#Debug__u6A21_u5F0F" class="headerlink" title="Debug 模式"></a>Debug 模式</h5><p><code>$ hexo --debug</code></p>
+<p>该模式下会生成log文件，终端中会打印log信息。</p>
+<h5 id="u9759_u97F3_u6A21_u5F0F"><a href="#u9759_u97F3_u6A21_u5F0F" class="headerlink" title="静音模式"></a>静音模式</h5><p><code>$ hexo --silent</code></p>
+<p>该模式下终端不会显示任何信息。</p>
+<h5 id="u81EA_u5B9A_u4E49_u8BBE_u7F6E_u6587_u4EF6_u4F4D_u7F6E"><a href="#u81EA_u5B9A_u4E49_u8BBE_u7F6E_u6587_u4EF6_u4F4D_u7F6E" class="headerlink" title="自定义设置文件位置"></a>自定义设置文件位置</h5><p><code>$ hexo --config custom.yml</code></p>
+<h5 id="u663E_u793A_u8349_u7A3F"><a href="#u663E_u793A_u8349_u7A3F" class="headerlink" title="显示草稿"></a>显示草稿</h5><p><code>$ hexo --draft</code></p>
+<p>显示 <code>source/_drafts</code> 下的草稿文件.</p>
+<h5 id="u81EA_u5B9A_u4E49_CWD"><a href="#u81EA_u5B9A_u4E49_CWD" class="headerlink" title="自定义 CWD"></a>自定义 CWD</h5><p><code>$ hexo --cwd /path/to/cwd</code></p>
 
             
           </span>
@@ -755,7 +851,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -769,7 +865,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>

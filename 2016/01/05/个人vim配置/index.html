@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo," />
+  <meta name="keywords" content="vim, vimrc, vim-addons, ubuntu," />
 
 
 
@@ -51,16 +51,22 @@
 
 
 
-<meta name="description" content="从命令行部署1234cd &amp;lt;blog-dir&amp;gt;hexo new &amp;lt;file&amp;gt;vim &amp;lt;file&amp;gt;hexo deploy -g">
+<meta name="description" content="安装在ubuntu中直接命令行输入：1sudo apt-get install vim-gnome
+同时安装vim的插件管理器123sudo apt-get install vim-addons-managersudo apt-get install vim-pathogensudo apt-get install vim-youcompleteme
+可以使用下面的命令查看vim插件：1vim-a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何将blog部署到github">
-<meta property="og:url" content="http://skitta.github.io/2016/01/05/如何将blog部署到github/index.html">
+<meta property="og:title" content="个人vim配置">
+<meta property="og:url" content="http://skitta.github.io/2016/01/05/个人vim配置/index.html">
 <meta property="og:site_name" content="寒舍有只断翅的知更">
-<meta property="og:description" content="从命令行部署1234cd &amp;lt;blog-dir&amp;gt;hexo new &amp;lt;file&amp;gt;vim &amp;lt;file&amp;gt;hexo deploy -g">
-<meta property="og:updated_time" content="2016-01-05T15:03:30.552Z">
+<meta property="og:description" content="安装在ubuntu中直接命令行输入：1sudo apt-get install vim-gnome
+同时安装vim的插件管理器123sudo apt-get install vim-addons-managersudo apt-get install vim-pathogensudo apt-get install vim-youcompleteme
+可以使用下面的命令查看vim插件：1vim-a">
+<meta property="og:updated_time" content="2016-01-06T09:56:00.144Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何将blog部署到github">
-<meta name="twitter:description" content="从命令行部署1234cd &amp;lt;blog-dir&amp;gt;hexo new &amp;lt;file&amp;gt;vim &amp;lt;file&amp;gt;hexo deploy -g">
+<meta name="twitter:title" content="个人vim配置">
+<meta name="twitter:description" content="安装在ubuntu中直接命令行输入：1sudo apt-get install vim-gnome
+同时安装vim的插件管理器123sudo apt-get install vim-addons-managersudo apt-get install vim-pathogensudo apt-get install vim-youcompleteme
+可以使用下面的命令查看vim插件：1vim-a">
 
 
 
@@ -72,7 +78,7 @@
   };
 </script>
 
-  <title> 如何将blog部署到github | 寒舍有只断翅的知更 </title>
+  <title> 个人vim配置 | 寒舍有只断翅的知更 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -192,7 +198,7 @@
             
             
               
-                如何将blog部署到github
+                个人vim配置
               
             
           </h1>
@@ -201,7 +207,7 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-05T22:58:51+08:00" content="2016-01-05">
+            <time itemprop="dateCreated" datetime="2016-01-05T23:19:14+08:00" content="2016-01-05">
               2016-01-05
             </time>
           </span>
@@ -225,7 +231,13 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="u4ECE_u547D_u4EE4_u884C_u90E8_u7F72"><a href="#u4ECE_u547D_u4EE4_u884C_u90E8_u7F72" class="headerlink" title="从命令行部署"></a>从命令行部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;blog-dir&gt;</span><br><span class="line">hexo new &lt;file&gt;</span><br><span class="line">vim &lt;file&gt;</span><br><span class="line">hexo deploy -g</span><br></pre></td></tr></table></figure>
+        <span itemprop="articleBody"><h2 id="u5B89_u88C5"><a href="#u5B89_u88C5" class="headerlink" title="安装"></a>安装</h2><p>在ubuntu中直接命令行输入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install vim-gnome</span><br></pre></td></tr></table></figure></p>
+<p>同时安装vim的插件管理器<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install vim-addons-manager</span><br><span class="line">sudo apt-get install vim-pathogen</span><br><span class="line">sudo apt-get install vim-youcompleteme</span><br></pre></td></tr></table></figure></p>
+<p>可以使用下面的命令查看vim插件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim-addons</span><br></pre></td></tr></table></figure></p>
+<p>使用一下命令安装列出的可安装插件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim-addons install &lt;addon&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="u5173_u4E8Epathogen"><a href="#u5173_u4E8Epathogen" class="headerlink" title="关于pathogen"></a>关于pathogen</h3><p>pathogen 能为vim插件保存在独立文件中便于管理，并且能在vim启动时自动加载。<br>安装pathogen后的.vim目录：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|--autoload  #vim&#30340;&#33258;&#21160;&#21152;&#36733;&#30446;&#24405;&#10;|--bundle    #pathogen&#33258;&#21160;&#21152;&#36733;&#25554;&#20214;&#30446;&#24405;&#10;|--doc&#10;|--plugin    #vim&#30340;&#25554;&#20214;&#30446;&#24405;</span><br></pre></td></tr></table></figure></p>
+<h2 id="vim_u914D_u7F6E"><a href="#vim_u914D_u7F6E" class="headerlink" title="vim配置"></a>vim配置</h2><p>vim python的配置<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#34;normal setting&#10;set nocompatible&#10;&#10;if has(&#34;gui_running&#34;)&#10;    set lines=42&#10;    set columns=118&#10;endif&#10;&#10;set guiheadroom=0&#10;&#10;&#34;format&#10;set nu&#10;set noexpandtab&#10;set copyindent&#10;set preserveindent&#10;set autowrite&#10;set display=lastline&#10;&#10;&#34;encoding&#10;set encoding=utf-8&#10;set fileencoding=utf-8&#10;set fileencodings=utf-8,ucs-bom,latin1&#10;set termencoding=utf-8&#10;&#10;&#34;index&#10;set wrap&#10;set autoindent&#10;set smartindent&#10;set smarttab&#10;set cindent&#10;set linebreak&#10;set shiftround&#10;&#10;&#34;code folding&#10;set foldmethod=indent&#10;set foldlevel=99&#10;&#10;&#34;search and case&#10;set gdefault&#10;set hlsearch&#10;set incsearch&#10;set ignorecase&#10;set fileignorecase&#10;set showcmd&#10;set whichwrap+=&#60;,&#62;,h,l&#10;&#10;&#34;no backup&#10;set nobackup&#10;set nowritebackup&#10;set noswapfile&#10;&#10;&#34;rule&#10;set noshowmode&#10;set ruler&#10;set winaltkeys=no&#10;&#10;&#34;advance&#10;set magic&#10;set lazyredraw&#10;set ttyfast&#10;set hidden&#10;set autoread&#10;set laststatus=2&#10;set cmdheight=1&#10;set modelines=1&#10;&#10;&#34;no sound&#10;set noerrorbells&#10;set novisualbell&#10;set t_vb=&#10;&#10;&#34;fold setting&#10;set foldenable&#10;set fileformat=unix&#10;set fileformats=unix,dos,mac&#10;&#10;if has(&#34;gui_running&#34;)&#10;&#9;set guioptions-=e&#10;&#9;set guioptions-=m&#10;&#9;set guioptions-=T&#10;&#9;set guioptions-=L&#10;&#9;set guioptions-=r&#10;&#9;set guioptions-=B&#10;&#9;set guioptions-=0&#10;&#9;set go=&#10;&#9;set guitablabel=&#10;&#9;set paste&#10;&#9;set mousemodel=popup_setpos&#10;&#9;set mouse-=a&#10;&#9;&#34;set guitablabel=%M\ %t&#10;&#10;&#9;&#34; Fonts Settings&#10;&#9;&#34;set guifont=ProfontWindows\ 9&#10;&#9;&#34;set guifont=IBM\ 3270\ Narrow\ Medium\ 10&#10;    &#34;set guifont=Aix\ 9&#10;&#10;&#9;map &#60;silent&#62; &#60;F1&#62; :if &#38;guioptions =~# &#39;T&#39; &#60;Bar&#62;&#10;&#9;&#9;&#9;&#9;\set guioptions-=T &#60;Bar&#62;&#10;&#9;&#9;&#9;&#9;\set guioptions-=m &#60;bar&#62;&#10;&#9;&#9;&#9;&#9;\else &#60;Bar&#62;&#10;&#9;&#9;&#9;&#9;\set guioptions+=T &#60;Bar&#62;&#10;&#9;&#9;&#9;&#9;\set guioptions+=m &#60;Bar&#62;&#10;&#9;&#9;&#9;&#9;\endif&#60;CR&#62;&#10;endif&#10;&#10;&#34;setting tabs&#10;set list listchars=tab:-\ ,extends:&#62;,precedes:&#60;&#10;&#10;&#34;plugin&#10;execute pathogen#infect()&#10;syntax on&#10;filetype plugin indent on&#10;&#10;&#34;taglist setting&#10;let Tlist_Auto_Highlight_Tag=1&#10;let Tlist_Auto_Open=0&#10;let Tlist_Auto_Update=1&#10;let Tlist_Display_Tag_Scope=1&#10;let Tlist_Exit_OnlyWindow=1&#10;let Tlist_Enable_Dold_Column=1&#10;let Tlist_File_Fold_Auto_Close=1&#10;let Tlist_Show_One_File=1&#10;let Tlist_Use_Right_Window=1&#10;let Tlist_Use_SingleClick=1&#10;&#34;nero tree ignore file&#10;let NERDTreeIgnore=[&#34;.pyc$&#34;, &#34;~$&#34;]&#10;&#34;simply fold setting&#10;let g:SimpylFold_docstring_preview=1&#10;&#34;autocompleteme&#10;let g:ycm_autoclose_preview_window_after_completion=1&#10;map &#60;leader&#62; g :YcmCompleter GotoDefinitionElseDeclaration&#60;CR&#62;&#10;&#34;python highlight&#10;let python_highlight_all=1&#10;&#34;color scheme&#10;if has(&#34;gui_running&#34;)&#10;&#9;set background=dark&#10;&#9;colorscheme solarized&#10;&#9;call togglebg#map(&#34;&#60;F5&#62;&#34;)&#10;endif&#10;&#34;airline&#10;if !exists(&#39;g:airline_symbols&#39;)&#10;  let g:airline_symbols = &#123;&#125;&#10;endif&#10;let g:airline_left_sep = &#39;&#39;&#10;let g:airline_right_sep = &#39;&#39;&#10;let g:airline#extensions#tabline#enabled = 1&#10;let g:airline#extensions#tabline#left_sep = &#39;&#39;&#10;let g:airline#extensions#tabline#left_alt_sep = &#39;|&#39;&#10;&#10;&#34;python virtualenv support&#10;py &#60;&#60; EOF&#10;import os&#10;import sys&#10;if &#34;VIRTUAL_ENV&#34; in os.environ:&#10;&#9;project_base_dir = os.environ[&#34;VIRTUAL_ENV&#34;]&#10;&#9;activate_this = os.path.join(project_base_dir, &#34;bin/activate_this.py&#34;)&#10;&#9;execfile(activate_this, dict(__file__=activate_this))&#10;EOF&#10;&#10;&#34;key map&#10;nnoremap &#60;F2&#62; :NERDTreeToggle&#60;CR&#62;&#10;nnoremap &#60;silent&#62; &#60;F8&#62; :TlistToggle&#60;CR&#62;&#10;&#34;windows split&#10;nnoremap &#60;C-J&#62; &#60;C-W&#62;&#60;C-J&#62;&#10;nnoremap &#60;C-K&#62; &#60;C-W&#62;&#60;C-K&#62;&#10;nnoremap &#60;C-L&#62; &#60;C-W&#62;&#60;C-L&#62;&#10;nnoremap &#60;C-H&#62; &#60;C-W&#62;&#60;C-H&#62;&#10;&#34;code folding&#10;nnoremap &#60;space&#62; za</span><br></pre></td></tr></table></figure></p>
+<h3 id="vim_u63D2_u4EF6"><a href="#vim_u63D2_u4EF6" class="headerlink" title="vim插件"></a>vim插件</h3><p>taglist  youcompleteme  pathogen<br>ctrlp     SimpylFold  vim-airline           vim-flake8<br>nerdtree  syntastic   vim-colors-solarized  vim-fugitive</p>
 </span>
       
     </div>
@@ -234,7 +246,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+            <a href="/tags/vim-vimrc-vim-addons-ubuntu/" rel="tag">#vim, vimrc, vim-addons, ubuntu</a>
           
         </div>
       
@@ -243,17 +255,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/04/HexoDocumentation/" rel="next" title="Hexo 文档">
-                <i class="fa fa-chevron-left"></i> Hexo 文档
+              <a href="/2016/01/05/如何将blog部署到github/" rel="next" title="如何将blog部署到github">
+                <i class="fa fa-chevron-left"></i> 如何将blog部署到github
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/05/个人vim配置/" rel="prev" title="个人vim配置">
-                个人vim配置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -367,7 +375,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4ECE_u547D_u4EE4_u884C_u90E8_u7F72"><span class="nav-number">1.</span> <span class="nav-text">从命令行部署</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u5B89_u88C5"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5173_u4E8Epathogen"><span class="nav-number">1.1.</span> <span class="nav-text">关于pathogen</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim_u914D_u7F6E"><span class="nav-number">2.</span> <span class="nav-text">vim配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vim_u63D2_u4EF6"><span class="nav-number">2.1.</span> <span class="nav-text">vim插件</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
